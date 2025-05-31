@@ -1,9 +1,8 @@
-const BlogsList = (props) => {
-
-    const blogItems = props.blogItems;
+const BlogsList = ({blogItems,handleClick}) => {
+ 
+    console.log(blogItems);
     return ( 
         <div className="container text-center my-5">
-            <h1 className="text-center">{props.title}</h1>
         <table className="table table-striped table-bordered">
             <thead>
                 <tr>
@@ -11,6 +10,7 @@ const BlogsList = (props) => {
                     <th scope="col">Title</th>
                     <th scope="col">Author</th>
                     <th scope="col">price</th>
+                    <th scope="col">Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -20,6 +20,10 @@ const BlogsList = (props) => {
                         <td>{blog.title}</td>
                         <td>{blog.Author}</td>
                         <td>{blog.price}</td>
+                        <th scope="row">
+                            <button type="button" className="btn btn-primary">Edit</button>
+                            <button type="button" onClick={()=>handleClick(blog.id)} className="btn btn-danger">Delete</button>
+                        </th>
                     </tr>
                 ))}
                 

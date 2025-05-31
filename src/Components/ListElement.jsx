@@ -1,5 +1,6 @@
 import React from 'react';
 import BlogsList from './BlogsList';
+import { useState } from 'react';
 
 const ListElement = () => {
    let blogs=
@@ -24,11 +25,14 @@ const ListElement = () => {
         }
       ];
 
-
-
+   const [blogItem, setBlogs] = useState(blogs);  
+   const handleClick = (id) => {
+        const blogToDelete = blogItem.filter(blog => blog.id !== id);
+        setBlogs(blogToDelete);
+    }
     return (
       <>
-        <BlogsList blogItems={blogs}  title="Hello world"/>
+        <BlogsList blogItems={blogItem} handleClick={handleClick}/>
       </>
 
       );
