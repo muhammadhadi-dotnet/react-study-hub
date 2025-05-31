@@ -1,6 +1,4 @@
 const BlogsList = ({blogItems,handleClick}) => {
- 
-    console.log(blogItems);
     return ( 
         <div className="container text-center my-5">
         <table className="table table-striped table-bordered">
@@ -17,9 +15,9 @@ const BlogsList = ({blogItems,handleClick}) => {
                 {blogItems.map((blog, index) => (
                     <tr key={index}>
                         <th scope="row">{index + 1}</th>
-                        <td>{blog.title}</td>
-                        <td>{blog.Author}</td>
-                        <td>{blog.price}</td>
+                        <td>{blog.name}</td>
+                        <td>{blog.email}</td>
+                        <td>{blog.phone}</td>
                         <th scope="row">
                             <button type="button" className="btn btn-primary">Edit</button>
                             <button type="button" onClick={()=>handleClick(blog.id)} className="btn btn-danger">Delete</button>

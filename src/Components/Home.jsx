@@ -10,7 +10,6 @@ const Home = () => {
     setCount(count + 1);
     if(count ==10){
         setCount("You are completed 10 clicks");
-        
     }
     setName("Home Page Button Click");
     console.log("Button clicked");
