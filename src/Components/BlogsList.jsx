@@ -1,6 +1,7 @@
 const BlogsList = ({blogItems}) => {
     return ( 
         <div className="container text-center my-5">
+         <h1 className="text-center my-5">Blogs List</h1>   
         <table className="table table-striped table-bordered">
             <thead>
                 <tr>
