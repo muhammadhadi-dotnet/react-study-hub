@@ -1,11 +1,12 @@
 import React from 'react';
 import BlogsList from './BlogsList';
 import useFetch from './useFetch';
+import { API_ENDPOINTS } from './Api/ApiEndpoints';
 
 
 const ListElement = () => {
    
-   const {data,loading,error} = useFetch('https://jsonplaceholder.typicode.com/users');
+   const {data,loading,error} = useFetch(API_ENDPOINTS.GET_USERS);
    const handleClick = (id) => {
         alert(`You clicked on user with ID: ${id}`);
     }
