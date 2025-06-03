@@ -19,7 +19,7 @@ const useFetch = (url)=>{
                 return response.json();
             })
             .then(data => {
-                setData(data);
+                setData(data.result);
                 setLoading(false);
                 setError(null);
             })
