@@ -11,6 +11,9 @@ import FormName from './Components/FormName';
 import Book from './Components/book-components/Book';
 import CreateBook from './Components/book-components/CreateBook';
 import EditBook from './Components/book-components/EditBook';
+import Todo from './Components/TodoList';  
+import AddTodoList from './Components/AddTodoList';
+
 
 function App() {
   return (
@@ -20,6 +23,8 @@ function App() {
      <ToastContainer />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/todo" element={<Todo />} />
+        <Route path="/AddTodoList" element={<AddTodoList />} />
         <Route path="/create" element={<Create />} />
         <Route path="/list" element={<ListElement />} />
         <Route path="/blogs" element={<NameList />} />
