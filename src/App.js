@@ -13,6 +13,7 @@ import CreateBook from './Components/book-components/CreateBook';
 import EditBook from './Components/book-components/EditBook';
 import Todo from './Components/TodoList';  
 import AddTodoList from './Components/AddTodoList';
+import Post from './Components/Posts';
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         <Route path="/book" element={<Book />} />
         <Route path="/new-book" element={<CreateBook />} />
         <Route path="/edit/:id" element={<EditBook />} />
+        <Route path="/post" element={<Post />} />
 
       </Routes>
     </Router>

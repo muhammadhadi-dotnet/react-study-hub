@@ -24,6 +24,7 @@ const Home = () => {
             <Link to="/list" className="btn btn-info mx-2">List</Link>
             <Link to="/" className="btn btn-warning mx-2">Home</Link>
             <Link to="/todo" className="btn btn-warning mx-2">Todo</Link>
+            <Link to="/post" className="btn btn-warning mx-2">Post</Link>
         <button type="button" onClick={handleClick} className="btn btn-primary">
             Click me    </button>  
         </div> 
